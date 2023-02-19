@@ -1,0 +1,16 @@
+pipline {
+ agent any 
+ stages {
+           stage('Checkout git'){
+            steps {
+               echo 'Puling...';
+               git branch : 'main',
+               url : 'https://github.com/jasserDridi/quarkus-mongodb-training';
+               }
+               }
+           stage('build maven'){
+            steps {
+                    sh """ mvn install """
+                    }
+                  }
+                  }
