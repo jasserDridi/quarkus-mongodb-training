@@ -10,7 +10,8 @@ pipline {
                }
            stage('build maven'){
             steps {
-                    sh """ mvn install """
+                    echo 'INSTALLING...';
+                    mvn install 
                     }
                   }
                   }
